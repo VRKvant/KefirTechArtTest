@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WATERFALL
+  m_Name: waterfall
   m_Shader: {fileID: -6465566751694194690, guid: ad02dfbb33d6a184b9315bcc388e3539,
     type: 3}
   m_ValidKeywords: []
@@ -52,24 +52,26 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _BOOLEAN: 0
     - _Distance: 1
-    - _FoamCutoff: 44.51
-    - _FoamDist: 15.99
+    - _FoamCutoff: 44.9
+    - _FoamDist: 14.2
     - _FoamScale: 7.5
-    - _FoamSpeed: 0.7
+    - _FoamSpeed: 0.9
     - _HighFrequency: 0.2
     - _NormalStrength: 1
+    - _OppositeFlow: 0.2
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RefractionSpeed: 0.06
     - _RefractionStrength: 2
-    - _Smoothness: 0.736
+    - _Smoothness: 1
     - _WaveAmplitude: 0.2
-    - _WaveSpeed: -5
+    - _WaveSpeed: 0
     m_Colors:
-    - _DeepColor: {r: 0.08664116, g: 0.5566038, b: 0.5043521, a: 0.23529412}
-    - _FoamColor: {r: 1, g: 1, b: 1, a: 0.64705884}
+    - _DeepColor: {r: 0.29307583, g: 0.6981132, b: 0.6981132, a: 0.23529412}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 0.6666667}
     - _FoamScale: {r: 30, g: 40, b: 0, a: 0}
     - _RefractionScale: {r: 1, g: 0.1, b: 0, a: 0}
-    - _SurfColor: {r: 0.3252047, g: 0.7924528, b: 0.6892235, a: 0.45490196}
+    - _SurfColor: {r: 0.27367392, g: 0.7735849, b: 0.6669863, a: 0.45490196}
   m_BuildTextureStacks: []
