@@ -213,7 +213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73294608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.25, y: -2.065, z: -7.781}
+  m_LocalPosition: {x: 4.25, y: -2.161, z: -7.781}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 382677592}
   - component: {fileID: 382677591}
   m_Layer: 0
-  m_Name: vfxWaterSpark
+  m_Name: "vfxWate\u043A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5163,17 +5163,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4e81b3ea5fc4c2d4e95db05094a5bacd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.89
+      value: 1.87
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e81b3ea5fc4c2d4e95db05094a5bacd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.27
+      value: -2.53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e81b3ea5fc4c2d4e95db05094a5bacd,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.83
+      value: -5.45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e81b3ea5fc4c2d4e95db05094a5bacd,
         type: 3}
@@ -5264,7 +5264,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.2834639, g: 0.5167649, b: 0.6603774, a: 0}
+  m_BackGroundColor: {r: 0.28635636, g: 0.3924712, b: 0.6132076, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -5359,18 +5359,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d24b55ef2885dbc4c8cd9e6d817579ad,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d24b55ef2885dbc4c8cd9e6d817579ad,
+        type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.1225
+      value: 1.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d24b55ef2885dbc4c8cd9e6d817579ad,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.97
+      value: -1.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d24b55ef2885dbc4c8cd9e6d817579ad,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.99
+      value: 5.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d24b55ef2885dbc4c8cd9e6d817579ad,
         type: 3}
@@ -5420,7 +5425,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d24b55ef2885dbc4c8cd9e6d817579ad,
         type: 3}
       propertyPath: m_Name
-      value: WATERF
+      value: waterfall
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d24b55ef2885dbc4c8cd9e6d817579ad,
         type: 3}
@@ -10253,7 +10258,7 @@ GameObject:
   - component: {fileID: 1765566819}
   - component: {fileID: 1765566818}
   m_Layer: 0
-  m_Name: spark
+  m_Name: waterSplashes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15283,7 +15288,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &1097772090766060664
 GameObject:
@@ -15301,7 +15306,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1503574090111105769
 Transform:
@@ -15393,7 +15398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6617658767038836709}
   m_Layer: 0
-  m_Name: rocks
+  m_Name: rocks (notOptimized) only visual aestethic purpose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
