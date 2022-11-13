@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &73294609
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1025,7 +1025,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1.96
+      value: 1.68
       mode: 0
       spread: 0
       speed:
@@ -5025,7 +5025,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382677590}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.29, y: -0.98, z: -4.94}
+  m_LocalPosition: {x: 0.34, y: -0.98, z: -4.92}
   m_LocalScale: {x: 2.002377, y: 1.9797873, z: 1.739952}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5099,7 +5099,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c040912e92a67774e8fa9546811b5951, type: 2}
+      objectReference: {fileID: 2100000, guid: 2c5e41ecb7d1393428b1e1db235b00d9, type: 2}
     - target: {fileID: 919132149155446097, guid: 4e81b3ea5fc4c2d4e95db05094a5bacd,
         type: 3}
       propertyPath: m_Name
@@ -5184,14 +5184,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785022488}
-  m_LocalRotation: {x: -0.077047154, y: 0.498415, z: -0.04393186, w: -0.86238986}
-  m_LocalPosition: {x: 16.475645, y: 3.217415, z: -9.843773}
+  m_LocalRotation: {x: -0.07850732, y: 0.52767366, z: -0.041265894, w: -0.8448042}
+  m_LocalPosition: {x: 16.15, y: 3.47, z: -9.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10.148, y: -64.047, z: -0.764}
 --- !u!114 &785022492
 MonoBehaviour:
   m_ObjectHideFlags: 0
