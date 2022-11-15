@@ -1,59 +1,75 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class AnimationController : MonoBehaviour
 {
     [SerializeField] private float _accelerationSpeed = 1.3f;
     [SerializeField] private float _decelerationSpeed = 2.0f;
-    [SerializeField] private Rigidbody[] _rigidbodies;
+
+    private Rigidbody[] _rigidbodies;
 
     private Animator _animator;
     private float _velocity;
-    private const string _clawAttackTrigger = "ClawAttackTrigger";
-    private const string _specialAttackTrigger = "SpecialAttackTrigger";
-    private const string _movementVelocity = "MovementVelocity";
 
+    private const string _movementVelocity = "MovementVelocity";
+    private const string _attackTrigger = "AttackTrigger";
+
+    private bool _isAttacking = false;
+
+    private void OnEnable()
+    {
+        AttackController.OnAttackExit += AttackEndCallback;
+        AttackController.OnAttackEnter += AttackStartCallback;
+    }
     private void Start()
     {
+        _animator = GetComponent<Animator>();
+
+        _rigidbodies = GetComponentsInChildren<Rigidbody>();
         for (int i = 0; i < _rigidbodies.Length; i++)
         {
             _rigidbodies[i].isKinematic = true;
         }
-        _animator = GetComponent<Animator>();
+
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+
+        if (Input.GetMouseButtonDown(0) && !_isAttacking)
         {
-            if (Random.value < 0.5)
-            {
-                _animator.SetTrigger(_clawAttackTrigger);
-            }
-            else
-            {
-                _animator.SetTrigger(_specialAttackTrigger);
-            }
+            _animator.SetTrigger(_attackTrigger);
 
         }
 
-        if (Input.GetKey(KeyCode.W) && _velocity < 1.0f)
+        if (Input.GetKey(KeyCode.W))
         {
             _velocity += Time.deltaTime * _accelerationSpeed;
+            if (_velocity > 1f)
+            {
+                _velocity = 1f;
+            }
         }
         else
         {
             _velocity -= Time.deltaTime * _decelerationSpeed;
+            if (_velocity < 0f)
+            {
+                _velocity = 0f;
+            }
         }
-        if (_velocity < 0f)
-        {
-            _velocity = 0f;
-        }
+
         _animator.SetFloat(_movementVelocity, _velocity);
 
-        
         if (Input.GetKeyDown(KeyCode.D))
         {
             EnablePhysic();
         }
+    }
+    private void OnDisable()
+    {
+        AttackController.OnAttackExit -= AttackEndCallback;
+        AttackController.OnAttackEnter -= AttackStartCallback;
+
     }
 
     private void EnablePhysic()
@@ -64,4 +80,14 @@ public class AnimationController : MonoBehaviour
             _rigidbodies[i].isKinematic = false;
         }
     }
+
+    private void AttackStartCallback()
+    {
+        _isAttacking = true;
+    }
+    private void AttackEndCallback()
+    {
+        _isAttacking = false;
+    }
+
 }
