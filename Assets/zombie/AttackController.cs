@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AttackController : StateMachineBehaviour
 {
-    public static event Action OnAttackExit;
-    public static event Action OnAttackEnter;
+    public event Action OnAttackExit;
+    public event Action OnAttackEnter;
 
 
     private List<string> _attackTriggers;

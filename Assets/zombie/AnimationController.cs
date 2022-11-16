@@ -16,14 +16,20 @@ public class AnimationController : MonoBehaviour
 
     private bool _isAttacking = false;
 
+    private AttackController _attackController;
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+        _attackController = _animator.GetBehaviour<AttackController>();
+    }
     private void OnEnable()
     {
-        AttackController.OnAttackExit += AttackEndCallback;
-        AttackController.OnAttackEnter += AttackStartCallback;
+        _attackController.OnAttackExit += AttackEndCallback;
+        _attackController.OnAttackEnter += AttackStartCallback;
     }
     private void Start()
     {
-        _animator = GetComponent<Animator>();
 
         _rigidbodies = GetComponentsInChildren<Rigidbody>();
         for (int i = 0; i < _rigidbodies.Length; i++)
@@ -67,8 +73,8 @@ public class AnimationController : MonoBehaviour
     }
     private void OnDisable()
     {
-        AttackController.OnAttackExit -= AttackEndCallback;
-        AttackController.OnAttackEnter -= AttackStartCallback;
+        _attackController.OnAttackExit -= AttackEndCallback;
+        _attackController.OnAttackEnter -= AttackStartCallback;
 
     }
 
