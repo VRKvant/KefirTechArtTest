@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9138471460386522451}
   - component: {fileID: 9138471460386522460}
   m_Layer: 0
-  m_Name: "vfxWate\u043A"
+  m_Name: vfxWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
